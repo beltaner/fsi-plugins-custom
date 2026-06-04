@@ -1,0 +1,7 @@
+{
+  "name": "equity-research-value",
+  "displayName": "Equity Research (Value Style)",
+  "version": "0.1.0",
+  "description": "Personal value-investing add-on to equity-research. Adds a value-coverage command and skill producing a quality-first initiating coverage with MOS-based rating and operational price levels.",
+  "author": "beltaner"
+}
