@@ -50,6 +50,18 @@ later be transcribed and condensed into 5 of the 16 sections of the final docx.
 
 ## Section Structure
 
+> **Write in prose, not bullets.** The "Cover:" lists under each extended section
+> below are CHECKLISTS of what the section must address — they are NOT a
+> formatting template. Each extended section (2-6) is written as continuous,
+> discursive prose in flowing paragraphs, matching the ICE golden reference. Do
+> NOT reproduce the checklist as a bulleted list, and do NOT carry the bold
+> lead-ins from the checklist into the prose as inline bold. Bullets are
+> appropriate only in the Snapshot ("reasons to own / not to own"). Bold, if used
+> at all, appears only as a paragraph lead-in — never mid-sentence. See
+> `references/style-guide.md` §4. The downstream report (Task 5) transcribes this
+> research, so prose written here becomes prose in the final document; bullets
+> written here leak into the final document as bullets.
+
 ### 1. Snapshot (300-500 words)
 - Ticker, exchange, current price (from web search if not in filings), market
   cap, enterprise value
@@ -185,6 +197,8 @@ Before saving the file, verify:
 - [ ] Five extended sections meet their word minimums
 - [ ] Sector-specific KPIs identified and used consistently
 - [ ] Every fact in extended sections is followed by an implication ("so what")
+- [ ] Extended sections (2-6) are written as flowing prose, NOT bulleted lists
+- [ ] No inline / mid-paragraph bold; bold only as a paragraph lead-in if at all
 - [ ] No invented data — every number traces to a source document or web search
 - [ ] Recent Issues distinguishes noise from signal
 - [ ] No "BUY/HOLD/SELL" recommendation (that comes in Task 3)

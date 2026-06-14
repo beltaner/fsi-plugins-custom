@@ -195,6 +195,17 @@ Transcribe from Task 1 Section 7.
 
 ## Style Rules
 
+- **Discursive prose, not bullets.** Sections 2-16 are written as flowing
+  paragraphs, matching the ICE golden reference — NOT as bulleted lists. The
+  bulleted items in the section specifications above describe the CONTENT each
+  section must contain; they are not a formatting template. Render that content
+  as continuous prose. Bullets are allowed only in the Snapshot (reasons to own
+  / not to own), the Risks section (a short paragraph per risk with a bold
+  lead-in, or the risk table), and Catalysts & Monitoring. See style guide §4.
+- **No mid-paragraph bold.** Bold appears ONLY as a paragraph lead-in (a risk
+  name, a scenario label, a pressure-point label). Never bold a word, figure,
+  percentage, company name, or concept inside a running sentence. The ICE
+  reference has essentially no inline bold; match it.
 - No "BUY/HOLD/SELL" rating as an independent label. The rating is the
   decision-matrix outcome surfaced as Strong Buy / Accumulate / Hold / Avoid.
 - No speculative 12-month sell-side price target. The "price target" is the
@@ -256,6 +267,9 @@ repeated here (the style guide prevails on any conflict):
 - [ ] Section 11 shows fair value, MOS, rating, decision, price levels table
 - [ ] No "BUY/HOLD/SELL" rating used
 - [ ] No 12-month price target
+- [ ] Sections 2-16 are discursive prose, NOT bulleted (bullets only in Snapshot
+      reasons, Risks, Catalysts per style guide §4)
+- [ ] No mid-paragraph bold anywhere; bold only as a paragraph lead-in
 - [ ] Times New Roman throughout
 - [ ] Page numbers present
 - [ ] Footer disclaimer present
