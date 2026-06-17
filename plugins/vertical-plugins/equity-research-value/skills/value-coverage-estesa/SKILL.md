@@ -34,18 +34,17 @@ allowing surgical re-runs of individual tasks.
 Detailed specifications for each task are in:
 
 - `tasks/01-research.md`
-- `tasks/01b-transcript-evolution.md` (Task 2 — analyzes the last ~8 earnings
+- `tasks/02-transcript-evolution.md` (Task 2 — analyzes the last ~8 earnings
   call transcripts to trace how pressure points and growth drivers have evolved
   quarter by quarter; produces an additive report section)
-- `tasks/02-modeling.md` (Task 3)
-- `tasks/03-valuation.md` (Task 4)
-- `tasks/04-charts.md` (Task 5)
-- `tasks/05-assembly.md` (Task 6)
+- `tasks/03-modeling.md` (Task 3)
+- `tasks/04-valuation.md` (Task 4)
+- `tasks/05-charts.md` (Task 5)
+- `tasks/06-assembly.md` (Task 6)
 
-Note on file naming: the task-spec files keep their original names; the new
-transcript task is `01b-transcript-evolution.md` so it sorts between the
-existing files without renaming them. The LOGICAL task order is 1 → 2
-(transcript) → 3 (modeling) → 4 (valuation) → 5 (charts) → 6 (assembly).
+The task-spec files are numbered sequentially 01 → 06, matching the logical
+task order: 1 research → 2 transcript evolution → 3 modeling → 4 valuation →
+5 charts → 6 assembly.
 
 The underlying value framework (quality scoring rubrics, DCF formulas, MOS
 matrix, rating logic, price level rules) is defined in:
@@ -198,11 +197,11 @@ skill — it is the user's stated default for finished reports.
 ## References
 
 - `tasks/01-research.md` — Task 1 detailed spec (company research)
-- `tasks/01b-transcript-evolution.md` — Task 2 detailed spec (8-quarter transcript evolution)
-- `tasks/02-modeling.md` — Task 3 detailed spec (financial modeling)
-- `tasks/03-valuation.md` — Task 4 detailed spec (valuation & quality scoring)
-- `tasks/04-charts.md` — Task 5 detailed spec (chart generation)
-- `tasks/05-assembly.md` — Task 6 detailed spec (final docx structure)
+- `tasks/02-transcript-evolution.md` — Task 2 detailed spec (8-quarter transcript evolution)
+- `tasks/03-modeling.md` — Task 3 detailed spec (financial modeling)
+- `tasks/04-valuation.md` — Task 4 detailed spec (valuation & quality scoring)
+- `tasks/05-charts.md` — Task 5 detailed spec (chart generation)
+- `tasks/06-assembly.md` — Task 6 detailed spec (final docx structure)
 - `references/value-framework.md` — quality rubrics, formulas, MOS matrix, rating logic
 - `references/style-guide.md` — visual/editorial identity: Italian conventions, layout, tables, chart palette
 
