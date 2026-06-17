@@ -11,13 +11,13 @@ artifact the user actually reads.
 
 A `.docx` file at: `{TICKER}_value_coverage_{YYYY-MM-DD}.docx`
 
-Target: 45-55 pages, 16,000-22,000 words, Times New Roman 11pt body, 14pt
+Target: 50-62 pages, 19,000-26,000 words, Times New Roman 11pt body, 14pt
 section headers, 12pt subsection headers, single-spaced, 1-inch margins.
 
 ### LENGTH MANDATE (non-negotiable)
 
 The user is making real capital-allocation decisions and requires an exhaustive
-report. The finished docx MUST reach at least 45 pages / 16,000 words. This is
+report. The finished docx MUST reach at least 50 pages / 19,000 words. This is
 a hard floor, not an aspiration. Concretely:
 
 - Each section's word target below is a MINIMUM, not a ceiling. If a section
@@ -28,7 +28,7 @@ a hard floor, not an aspiration. Concretely:
   add depth. A common failure is sections 8-16 thinning out as generation
   proceeds — guard against this explicitly and keep the back half as dense as
   the front half.
-- After drafting, COUNT the total words. If below 16,000, identify the
+- After drafting, COUNT the total words. If below 19,000, identify the
   thinnest sections and expand them with additional sub-analysis (more
   granular segment discussion, additional historical context, deeper treatment
   of each risk, fuller scenario narratives) until the floor is met.
@@ -38,10 +38,10 @@ a hard floor, not an aspiration. Concretely:
 ## Prerequisites
 
 - Task 1 complete: `{TICKER}_research.md`
-- Task 2 complete: `{TICKER}_model.xlsx`
-- Task 3 complete: `{TICKER}_valuation.xlsx` AND the markdown summary from
-  Task 3 conclusion
-- Task 4 complete: `charts/` directory populated
+- Task 2 complete: `{TICKER}_transcript_evolution.md` (the 8-quarter analysis)
+- Task 3 complete: `{TICKER}_model.xlsx`
+- Task 4 complete: `{TICKER}_valuation.xlsx` AND the markdown valuation summary
+- Task 5 complete: `charts/` directory populated
 - `references/value-framework.md` read
 - **`references/style-guide.md` read — MANDATORY.** It defines the Italian
   language convention, page-1 title block, header/footer, table styling,
@@ -65,7 +65,7 @@ a hard floor, not an aspiration. Concretely:
 
 5. **Apply formatting standards** uniformly.
 
-## Final Report Structure (16 Sections)
+## Final Report Structure (17 Sections)
 
 ### Front Matter
 - Title page: ticker, company name, "Value Coverage — Initiating Report",
@@ -109,7 +109,35 @@ and margin trajectory.
 ### 7. Recent Issues & Pressure Points (2,000-2,800 words)
 Transcribe and refine Task 1 Section 6.
 
-### 8. Financial Analysis (1,800-2,200 words)
+### 8. Evoluzione su 8 Trimestri (3,500-4,500 words, minimo 3 pagine piene)
+Transcribe and refine `{TICKER}_transcript_evolution.md` from Task 2. This is an
+ADDITIVE section — it does not reduce any other section's length. Its placement
+here is deliberate: sections 2-7 describe the company's structure and current
+pressure points; this section shows how those pressure points and growth drivers
+have MOVED over the last ~8 quarters, bridging the static picture to the
+financial numbers that follow.
+
+Include:
+- A short intro: number of quarters analyzed, the date range, and the tracked-
+  theme set (split into user-specified watch items and AI-identified themes).
+- **The evolution table** (Tabella): rows = tracked themes, columns = quarters
+  (oldest → newest), final column = Traiettoria (in miglioramento / stabile /
+  in deterioramento). Style it per the standard "Tabella N." convention.
+- Per-theme narrative: how each theme evolved quarter by quarter, the metric and
+  tone trajectory, and the noise-vs-signal verdict.
+- Emerging themes (newly appeared in the discussion) and disappeared themes
+  (management stopped mentioning), plus any tone reversals.
+- A closing synthesis: the overall direction of the management narrative across
+  the window, and the 2-3 themes most important to keep watching with their
+  specific next-quarter signal.
+
+If fewer than 8 transcripts were available, state the actual count; the section
+adapts to whatever Task 2 produced.
+
+Insert the 1-2 transcript-evolution charts produced in Task 5 (metric trajectory
+and/or theme heatmap) inline in this section, each with a "Figura N." caption.
+
+### 9. Financial Analysis (1,800-2,200 words)
 Insert tables (extracted from Task 2 model):
 - 10-year P&L summary (revenue, gross profit, EBIT, net income, EPS,
   with growth rates)
@@ -126,7 +154,7 @@ FCF generation, balance sheet strength.
 Insert charts: ROIC History, Margin Trajectory, FCF & FCF Margin, Net Debt /
 EBITDA, Share Count.
 
-### 9. Forecast & DCF (1,100-1,400 words)
+### 10. Forecast & DCF (1,100-1,400 words)
 From Task 3 Sheet 3:
 - 10-year forecast assumptions summary (linked from Task 2 Sheet 6)
 - WACC build (compact table)
@@ -136,7 +164,7 @@ From Task 3 Sheet 3:
 
 Insert chart: DCF Sensitivity Heatmap.
 
-### 10. Valuation Triangulation (1,300-1,600 words)
+### 11. Valuation Triangulation (1,300-1,600 words)
 From Task 3 Sheets 4-7:
 - Multiples table: current vs 5y avg vs 10y avg vs peer median
 - FAST Graphs three sub-calculations
@@ -146,7 +174,7 @@ From Task 3 Sheets 4-7:
 
 Insert chart: Blended P/E History.
 
-### 11. Margin of Safety, Rating & Price Levels (700-900 words)
+### 12. Margin of Safety, Rating & Price Levels (700-900 words)
 From Task 3 summary:
 - Fair value $X / current price $Y / MOS Z%
 - **Rating**: [label] per decision matrix
@@ -157,7 +185,7 @@ From Task 3 summary:
 
 Insert chart: Stock Price with Valuation Bands.
 
-### 12. Capital Allocation & Shareholder Returns (1,000-1,300 words)
+### 13. Capital Allocation & Shareholder Returns (1,000-1,300 words)
 Transcribe from Task 1 Section 8 PLUS data tables from Task 2.
 - 10y cumulative capital deployment (capex, M&A, buybacks, dividends, debt
   paydown) — table or chart
@@ -166,7 +194,7 @@ Transcribe from Task 1 Section 8 PLUS data tables from Task 2.
 - Return-of-capital framework
 - Per-share value creation
 
-### 13. Risks (1,200-1,500 words)
+### 14. Risks (1,200-1,500 words)
 6-12 risks. Format each as a paragraph with bold lead-in:
 - **[Risk Name]** (Probability: L/M/H, Magnitude: L/M/H). Description.
   Mitigation. Monitoring signal.
@@ -175,7 +203,7 @@ Cover at minimum: competitive, demand/cyclical, execution, margin/cost, balance
 sheet, governance/key-person, valuation, plus any company-specific structural
 risks identified in Task 1 Section 6.
 
-### 14. Bull / Base / Bear Scenarios (900-1,200 words)
+### 15. Bull / Base / Bear Scenarios (900-1,200 words)
 From Task 3 Sheet 8. For each scenario:
 - Subsection heading: "[Scenario]: Probability X%, 10y IRR XX%"
 - One-paragraph narrative
@@ -184,10 +212,10 @@ From Task 3 Sheet 8. For each scenario:
 End the section with probability-weighted expected IRR and sanity-check
 commentary.
 
-### 15. Management & Governance (600-800 words)
+### 16. Management & Governance (600-800 words)
 Transcribe from Task 1 Section 7.
 
-### 16. Catalysts & Monitoring (350-500 words)
+### 17. Catalysts & Monitoring (350-500 words)
 - What to watch over the next 4-8 quarters (specific KPIs, specific thresholds)
 - What would make you reduce position size
 - What would make you add
@@ -195,17 +223,6 @@ Transcribe from Task 1 Section 7.
 
 ## Style Rules
 
-- **Discursive prose, not bullets.** Sections 2-16 are written as flowing
-  paragraphs, matching the ICE golden reference — NOT as bulleted lists. The
-  bulleted items in the section specifications above describe the CONTENT each
-  section must contain; they are not a formatting template. Render that content
-  as continuous prose. Bullets are allowed only in the Snapshot (reasons to own
-  / not to own), the Risks section (a short paragraph per risk with a bold
-  lead-in, or the risk table), and Catalysts & Monitoring. See style guide §4.
-- **No mid-paragraph bold.** Bold appears ONLY as a paragraph lead-in (a risk
-  name, a scenario label, a pressure-point label). Never bold a word, figure,
-  percentage, company name, or concept inside a running sentence. The ICE
-  reference has essentially no inline bold; match it.
 - No "BUY/HOLD/SELL" rating as an independent label. The rating is the
   decision-matrix outcome surfaced as Strong Buy / Accumulate / Hold / Avoid.
 - No speculative 12-month sell-side price target. The "price target" is the
@@ -253,23 +270,21 @@ repeated here (the style guide prevails on any conflict):
 
 ## Quality Checks Before Concluding Task 5
 
-- [ ] **Total word count >= 16,000 (hard floor); page count >= 45.** If not,
+- [ ] **Total word count >= 19,000 (hard floor); page count >= 50.** If not,
       expand the thinnest sections before finalizing — do not deliver under floor.
-- [ ] All 16 sections present in order
+- [ ] All 17 sections present in order (incl. Section 8 Evoluzione su 8 Trimestri)
 - [ ] Each section meets its individual word MINIMUM (targets are floors)
 - [ ] Back-half sections (8-16) are as dense as front-half sections (2-7)
 - [ ] Title page and TOC included
 - [ ] Five extended sections meet word minimums
-- [ ] All 12-16 charts from Task 4 inserted at appropriate places
+- [ ] All 15-18 charts from Task 5 inserted at appropriate places (incl. the
+      transcript-evolution chart(s) in Section 8)
 - [ ] All required tables from Task 2 inserted in Section 8
 - [ ] Snapshot (Section 1) shows quality score, fair value, MOS, rating, all
       three price levels, probability-weighted IRR
-- [ ] Section 11 shows fair value, MOS, rating, decision, price levels table
+- [ ] Section 12 shows fair value, MOS, rating, decision, price levels table
 - [ ] No "BUY/HOLD/SELL" rating used
 - [ ] No 12-month price target
-- [ ] Sections 2-16 are discursive prose, NOT bulleted (bullets only in Snapshot
-      reasons, Risks, Catalysts per style guide §4)
-- [ ] No mid-paragraph bold anywhere; bold only as a paragraph lead-in
 - [ ] Times New Roman throughout
 - [ ] Page numbers present
 - [ ] Footer disclaimer present
