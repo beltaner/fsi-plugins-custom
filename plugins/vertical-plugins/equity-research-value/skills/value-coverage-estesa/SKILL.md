@@ -1,42 +1,51 @@
 ---
 name: value-coverage-estesa
-description: "Create institutional-quality value-investing initiating coverage reports in ITALIAN with the standardized house visual identity (ICE golden-reference layout: Italian section titles, navy/teal/amber chart palette, 'Figura N.' chart titling, page-1 summary table with Qualita/Fair value/MOS/Rating/IRR, Tabella-styled tables). Same 5-task workflow as value-coverage — (1) company research, (2) financial modeling, (3) valuation & quality scoring, (4) chart generation, (5) final report assembly — with verified prerequisites and reusable deliverables (markdown research doc, Excel models, PNG charts, final DOCX). Audience is a private long-term value investor (5-10 year horizon). Quality-first framework, point estimate of fair value, MOS-based rating, operational price levels. Use when user requests 'copertura value', 'value coverage estesa', 'report standard', 'value coverage formato ICE', or a value coverage explicitly in Italian / in the house style. This is the user's preferred default edition for finished reports. Reports must be very extensive and in-depth: 45-55 pages, 16,000-22,000 words minimum — the user is making real investment decisions and requires exhaustive analysis."
+description: "Create institutional-quality value-investing initiating coverage reports in ITALIAN with the standardized house visual identity (ICE golden-reference layout: Italian section titles, navy/teal/amber chart palette, 'Figura N.' chart titling, page-1 summary table with Qualita/Fair value/MOS/Rating/IRR, Tabella-styled tables). A 6-task workflow — (1) company research, (2) 8-quarter transcript evolution analysis, (3) financial modeling, (4) valuation & quality scoring, (5) chart generation, (6) final report assembly — with verified prerequisites and reusable deliverables (markdown research doc, Excel models, PNG charts, final DOCX). Audience is a private long-term value investor (5-10 year horizon). Quality-first framework, point estimate of fair value, MOS-based rating, operational price levels. Use when user requests 'copertura value', 'value coverage estesa', 'report standard', 'value coverage formato ICE', or a value coverage explicitly in Italian / in the house style. This is the user's preferred default edition for finished reports. Reports must be very extensive and in-depth: 50-62 pages, 19,000-26,000 words minimum — the user is making real investment decisions and requires exhaustive analysis."
 ---
 
 # Value Coverage Estesa — Multi-Task Workflow (Standardized House Style)
 
 This skill produces an institutional-quality value-investing initiating coverage
-report through a 5-task workflow. Each task produces specific deliverables that
+report through a 6-task workflow. Each task produces specific deliverables that
 feed into subsequent tasks. The final output is a deep-dive `.docx` report
-(45-55 pages, 16,000-22,000 words), supported by a research markdown document,
-two Excel models, and 10-16 PNG charts — all preserved as reusable artifacts.
+(50-62 pages, 19,000-26,000 words), supported by a research markdown document,
+two Excel models, and 15-18 PNG charts — all preserved as reusable artifacts.
 
 ## Why a Multi-Task Workflow
 
 Producing a 35-page report in a single generation has three problems: late
 sections drift in quality as context fills, intermediate artifacts (Excel models,
 research notes) are not preserved for reuse in later quarterly updates, and
-mid-stream errors require re-generating the entire output. The 5-task workflow
+mid-stream errors require re-generating the entire output. The 6-task workflow
 solves all three by checkpointing deliverables, enforcing prerequisites, and
 allowing surgical re-runs of individual tasks.
 
-## The Five Tasks
+## The Six Tasks
 
 | Task | Name | Output | Dependencies |
 |------|------|--------|--------------|
 | 1 | Company Research | `{TICKER}_research.md` | None |
-| 2 | Financial Modeling | `{TICKER}_model.xlsx` | Task 1 |
-| 3 | Valuation & Quality Scoring | `{TICKER}_valuation.xlsx` | Tasks 1, 2 |
-| 4 | Chart Generation | `charts/*.png` (10-16 files) | Tasks 1, 2, 3 |
-| 5 | Final Report Assembly | `{TICKER}_value_coverage_{YYYY-MM-DD}.docx` | Tasks 1, 2, 3, 4 |
+| 2 | Transcript Evolution (8-quarter) | `{TICKER}_transcript_evolution.md` | Task 1 |
+| 3 | Financial Modeling | `{TICKER}_model.xlsx` | Task 1 |
+| 4 | Valuation & Quality Scoring | `{TICKER}_valuation.xlsx` | Tasks 1, 3 |
+| 5 | Chart Generation | `charts/*.png` (15-18 files) | Tasks 1, 3, 4 |
+| 6 | Final Report Assembly | `{TICKER}_value_coverage_{YYYY-MM-DD}.docx` | Tasks 1, 2, 3, 4, 5 |
 
 Detailed specifications for each task are in:
 
 - `tasks/01-research.md`
-- `tasks/02-modeling.md`
-- `tasks/03-valuation.md`
-- `tasks/04-charts.md`
-- `tasks/05-assembly.md`
+- `tasks/01b-transcript-evolution.md` (Task 2 — analyzes the last ~8 earnings
+  call transcripts to trace how pressure points and growth drivers have evolved
+  quarter by quarter; produces an additive report section)
+- `tasks/02-modeling.md` (Task 3)
+- `tasks/03-valuation.md` (Task 4)
+- `tasks/04-charts.md` (Task 5)
+- `tasks/05-assembly.md` (Task 6)
+
+Note on file naming: the task-spec files keep their original names; the new
+transcript task is `01b-transcript-evolution.md` so it sorts between the
+existing files without renaming them. The LOGICAL task order is 1 → 2
+(transcript) → 3 (modeling) → 4 (valuation) → 5 (charts) → 6 (assembly).
 
 The underlying value framework (quality scoring rubrics, DCF formulas, MOS
 matrix, rating logic, price level rules) is defined in:
@@ -99,7 +108,7 @@ task to re-run ("rifai solo la valutazione di ICE"), treat it as Mode C and
 proceed after confirming which prior artifacts exist.
 
 ### Mode A — All-In-One
-The skill runs all 5 tasks sequentially, checkpointing each artifact along the
+The skill runs all 6 tasks sequentially, checkpointing each artifact along the
 way, and delivers the final docx plus all intermediate files. The sequence is
 still preserved (each task reads the prior task's output before proceeding).
 
@@ -109,7 +118,7 @@ summarize the key outputs, and explicitly state which task is next and what
 artifacts will be produced. Wait for user confirmation before proceeding to the
 next task. This is the recommended mode for the FIRST coverage on a new company,
 where the user may want to review the research doc before greenlighting the
-modeling phase. Given the 45-55 page length mandate, this mode also lets the
+modeling phase. Given the 50-62 page length mandate, this mode also lets the
 user verify the research doc actually reaches its 9,000-13,000 word target
 before the rest of the report is built on top of it.
 
@@ -188,10 +197,12 @@ skill — it is the user's stated default for finished reports.
 
 ## References
 
-- `tasks/01-research.md` — Task 1 detailed spec
-- `tasks/02-modeling.md` — Task 2 detailed spec
-- `tasks/03-valuation.md` — Task 3 detailed spec
-- `tasks/04-charts.md` — Task 4 detailed spec
-- `tasks/05-assembly.md` — Task 5 detailed spec (final docx structure)
+- `tasks/01-research.md` — Task 1 detailed spec (company research)
+- `tasks/01b-transcript-evolution.md` — Task 2 detailed spec (8-quarter transcript evolution)
+- `tasks/02-modeling.md` — Task 3 detailed spec (financial modeling)
+- `tasks/03-valuation.md` — Task 4 detailed spec (valuation & quality scoring)
+- `tasks/04-charts.md` — Task 5 detailed spec (chart generation)
+- `tasks/05-assembly.md` — Task 6 detailed spec (final docx structure)
 - `references/value-framework.md` — quality rubrics, formulas, MOS matrix, rating logic
 - `references/style-guide.md` — visual/editorial identity: Italian conventions, layout, tables, chart palette
+
