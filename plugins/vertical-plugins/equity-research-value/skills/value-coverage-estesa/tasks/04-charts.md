@@ -16,9 +16,12 @@ One PNG per chart. Standard naming: `{TICKER}_{chart-slug}.png` (e.g.,
 ## Prerequisites
 
 - Task 1 complete: `{TICKER}_research.md`
-- Task 2 complete: `{TICKER}_model.xlsx` (source of all historical and
+- Task 2 complete: `{TICKER}_transcript_evolution.md` (source for the
+  transcript-evolution chart(s) — the per-quarter theme table and metric
+  trajectories)
+- Task 3 complete: `{TICKER}_model.xlsx` (source of all historical and
   forecast data)
-- Task 3 complete: `{TICKER}_valuation.xlsx` (source of valuation and
+- Task 4 complete: `{TICKER}_valuation.xlsx` (source of valuation and
   scenario data)
 - **`references/style-guide.md` read — MANDATORY.** It defines the canonical
   palette, the "Figura N." title-inside-the-PNG convention, the source line,
@@ -132,6 +135,37 @@ Choose charts that visualize the sector-specific KPIs from Task 1. Examples:
 Pick 2-6 based on which KPIs from Task 1 best tell the story. Filename
 pattern: `{TICKER}_{descriptive-slug}.png`
 
+## Transcript Evolution Charts (1-2 — when useful)
+
+The new report Section 8 ("Evoluzione su 8 Trimestri") benefits greatly from a
+visual, because a quarter-by-quarter trajectory is exactly what a chart conveys
+better than prose. Read `{TICKER}_transcript_evolution.md` (Task 2) and produce
+**1-2 charts** for this section WHEN the material supports it. Skip only if the
+transcript data is too sparse to chart meaningfully (e.g. very few quarters);
+in that case note why in the hand-off.
+
+Choose whichever of the following best fits the data Task 2 actually produced:
+
+### A. Metric trajectory across quarters (preferred when a clean metric exists)
+A multi-quarter line or bar chart of the 1-3 most important quantitative metrics
+the management discussed across the window — e.g. synergies realized per quarter,
+a backlog/ASV figure, a segment growth rate, a guidance figure. X-axis = quarters
+(oldest → newest), value labels on points. This is the most concrete way to show
+whether a tracked theme is genuinely improving or deteriorating.
+- Filename: `{TICKER}_transcript-metric-trajectory.png`
+
+### B. Theme trajectory heatmap / status grid (when themes are qualitative)
+A grid: rows = tracked themes, columns = quarters, each cell shaded by status
+(e.g. green = positive/improving tone, amber = stable/mixed, red =
+negative/deteriorating tone). This visualizes the evolution table from Task 2 at
+a glance and works even when themes are qualitative rather than numeric. Use the
+standard palette: green #2E9E4F, amber #E8A33D, red #C0392B.
+- Filename: `{TICKER}_transcript-theme-heatmap.png`
+
+Apply all the standard visual rules (Italian text, "Figura N." title inside the
+PNG, source line "Fonte: transcript earnings call {range trimestri}", canonical
+palette). These charts are inserted into Section 8 by Task 6.
+
 ## Visual Standards
 
 The authoritative specification is `references/style-guide.md`. Key rules
@@ -200,7 +234,10 @@ plt.close(fig)
 
 - [ ] 10 mandatory charts produced
 - [ ] 2-6 sector-specific charts produced
-- [ ] Total charts in `charts/` directory: 14-16 (favor the upper end for a 45-55 page report)
+- [ ] 1-2 transcript-evolution charts produced for Section 8 (or a note on why
+      the transcript data was too sparse to chart)
+- [ ] Total charts in `charts/` directory: 15-18 (favor the upper end for a
+      50-62 page report)
 - [ ] All files are PNG, 1600x1000 at 150 DPI
 - [ ] All filenames follow `{TICKER}_{slug}.png` pattern
 - [ ] No chart uses rainbow palette
@@ -211,7 +248,7 @@ plt.close(fig)
 
 Output a one-paragraph summary noting:
 - Path to `charts/` directory
-- Number of charts produced (mandatory + sector-specific)
+- Number of charts produced (mandatory + sector-specific + transcript)
 - Any chart that could not be produced due to missing data, and why
 
 Then proceed to Task 5 (or wait for user confirmation in Mode B).
