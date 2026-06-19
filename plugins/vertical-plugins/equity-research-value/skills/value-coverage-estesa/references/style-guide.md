@@ -20,7 +20,7 @@ producing any output.
 - **Magnitudes:** "mld" for billions ("$9,9 mld"), "mln" for millions
   ("$859 mln"). Dollar sign before the number.
 - **Negative numbers:** parentheses in tables; minus sign acceptable in prose.
-- **Standard Italian section titles** (use exactly these):
+- **Standard Italian section titles** (use exactly these — 17 sections):
   1. Quadro di sintesi
   2. Analisi del Settore
   3. Profilo Societario e Modello di Business
@@ -28,16 +28,23 @@ producing any output.
   5. Valutazione della Qualità
   6. Strategia di Crescita e Prospettive Future
   7. Criticità Recenti e Punti di Pressione
-  8. Analisi Finanziaria
-  9. Proiezioni e DCF
-  10. Triangolazione di Valutazione
-  11. Margine di Sicurezza, Rating e Livelli di Prezzo
-  12. Allocazione del Capitale e Ritorni per gli Azionisti
-  13. Rischi
-  14. Scenari Bull / Base / Bear
-  15. Management e Governance
-  16. Catalizzatori e Monitoraggio
+  8. Evoluzione su 8 Trimestri
+  9. Analisi Finanziaria
+  10. Proiezioni e DCF
+  11. Triangolazione di Valutazione
+  12. Margine di Sicurezza, Rating e Livelli di Prezzo
+  13. Allocazione del Capitale e Ritorni per gli Azionisti
+  14. Rischi
+  15. Scenari Bull / Base / Bear
+  16. Management e Governance
+  17. Catalizzatori e Monitoraggio
   + closing unnumbered section: "Metodologia e Fonti"
+  Note: the golden-reference ICE report predates the transcript phase and shows
+  only 16 sections (no "Evoluzione su 8 Trimestri"). Use ICE for VISUAL identity
+  only; the canonical section structure is the 17-section list above. Section 8
+  "Evoluzione su 8 Trimestri" is built from the Task 2 transcript-evolution
+  deliverable and sits between "Criticità Recenti" (7) and "Analisi
+  Finanziaria" (9).
 - **Standard rating labels in Italian:** Strong Buy / Accumulare / Mantenere /
   Evitare. (Keep "Strong Buy" in English; translate the other three.)
 - **Standard recurring phrases:** "Copertura Value — Report di Avvio" (report
@@ -49,7 +56,7 @@ producing any output.
 
 ### Page setup
 - Times New Roman. Body 11pt, justified, single-spaced.
-- Section headers (H1): 14pt bold, numbered ("8. Analisi Finanziaria").
+- Section headers (H1): 14pt bold, numbered ("9. Analisi Finanziaria").
 - Subsection headers (H2): 12pt bold italic, colored teal-blue (#1F7A8C or
   similar) — e.g. "Architettura dei ricavi: la spina dorsale
   ricorrente-vs-transazionale".
@@ -129,42 +136,8 @@ In order:
 
 ## 4. Editorial Style
 
-### Prose, not bullets (the defining editorial trait)
-- The report is written as continuous, discursive analytical prose. Sections 2
-  through 16 are essays in flowing paragraphs, NOT bulleted lists. The golden
-  reference (ICE) reads as long-form narrative: every analytical point is
-  developed in full sentences that connect to the next, never as a clipped
-  bullet. This is the single most important stylistic rule of the house style.
-- Every section opens with a framing paragraph and proceeds in paragraphs.
-  Where the task files (Task 1, Task 5) present a checklist of topics to
-  "Cover:", those checklists say WHAT to address — they are NOT a template for
-  HOW to format. Convert every such checklist into prose.
-- Bullet lists are permitted ONLY in these limited places, exactly as in the
-  ICE reference:
-  1. The page-1 / Snapshot "tre ragioni per possederlo" and "tre ragioni per
-     NON possederlo" (two short lists).
-  2. The Risks section, where each risk may be a short paragraph with a bold
-     lead-in name (see bold rule), or the risk-register table — not free
-     bullets of analysis.
-  3. The Catalysts & Monitoring section's "cosa osservare / cosa farebbe
-     aggiungere / cosa farebbe ridurre".
-  4. Compact data tables (which are tables, not bullets).
-  Everywhere else — industry, business model, competitive, quality, growth,
-  pressure points, financials, valuation, capital allocation, management — use
-  paragraphs. If a bulleted list of analytical points appears in any of those
-  sections, rewrite it as prose.
-
-### Bold and italics (strict)
-- Bold is used ONLY as a paragraph lead-in: the opening word or short phrase of
-  a paragraph or a labelled item (a risk name, a scenario name, a pressure-point
-  label). NEVER bold a word or phrase in the middle of a running sentence. Do
-  not bold figures, metrics, percentages, company names, or "key concepts"
-  inside a paragraph — the ICE reference contains essentially no mid-paragraph
-  bold, and this report must match it.
-- If emphasis is genuinely needed mid-sentence, achieve it through sentence
-  construction, not typography. Italics are reserved for the page-1 thematic
-  tagline, the occasional rhetorical pivot word (e.g. *quale*, *rumore*,
-  *segnale*) and verdict labels — used sparingly.
+- Long-form analytical prose; every section opens with a framing paragraph.
+- Bold for key inline concepts; italics for the tagline and rhetorical pivots.
 - Each "extended" section closes with an explicit verdict ("Verdetto: ...",
   "È rumore o segnale?", "La riconciliazione in una riga...").
 - The pressure-points section uses the fixed rubric "Punto di pressione N — ..."
